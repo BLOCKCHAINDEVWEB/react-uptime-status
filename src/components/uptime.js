@@ -4,13 +4,13 @@ import { GetMonitors } from '../utils/uptimerobot';
 
 const Uptime = (props) => {
 
-  const { CountDays } = window.Config;
+  const COUNT_DAYS = 90;
   const { apikey } = props;
   const [monitors, setMonitors] = useState(null);
 
   useEffect(() => {
-    GetMonitors(apikey, CountDays).then(setMonitors);
-  }, [apikey, CountDays]);
+    GetMonitors(apikey, COUNT_DAYS).then(setMonitors);
+  }, [apikey, COUNT_DAYS]);
 
   return monitors ? monitors.map(item => (
     <UptimeItem key={item.id} monitor={item} />

@@ -7,7 +7,8 @@ import { formatDuration } from '../utils/helper';
 
 const UptimeItem = (props) => {
 
-  const { ShowLink, CountDays } = window.Config;
+  const SHOW_LINK = false;
+  const COUNT_DAYS = 90;
   const { monitor } = props;
   
   const status = {
@@ -18,9 +19,9 @@ const UptimeItem = (props) => {
 
   const total = useMemo(() => {
     return monitor.total.times
-      ? `In Last ${CountDays} Days, Down ${monitor.total.times} Times，Total Down ${formatDuration(monitor.total.duration)}，Average Uptime ${monitor.average}%`
-      : `In Last ${CountDays} Days, Uptime is ${monitor.average}%`;
-  }, [CountDays, monitor]);
+      ? `In Last ${COUNT_DAYS} Days, Down ${monitor.total.times} Times，Total Down ${formatDuration(monitor.total.duration)}，Average Uptime ${monitor.average}%`
+      : `In Last ${COUNT_DAYS} Days, Uptime is ${monitor.average}%`;
+  }, [COUNT_DAYS, monitor]);
 
   const initial = useMemo(() => {
     return monitor.daily[monitor.daily.length - 1].date;
@@ -31,7 +32,7 @@ const UptimeItem = (props) => {
       <div className="meta">
         <div className="info">
           <span className="name">{htmr(monitor.name)}</span>
-          {ShowLink && <Link className="link" to={monitor.url} text={htmr(monitor.name)} />}
+          {SHOW_LINK && <Link className="link" to={monitor.url} text={htmr(monitor.name)} />}
         </div>
         <div className={`status ${monitor.status}`}>{status[monitor.status]}</div>
       </div>

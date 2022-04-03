@@ -5,6 +5,7 @@
   "dependencies": {
     "axios": "^0.26.1",
     "dayjs": "^1.8.31",
+    "dotenv": "^16.0.0",
     "htmr": "^0.8.8",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
@@ -12,8 +13,8 @@
     "react-tooltip": "^4.2.7"
   },
   "scripts": {
-    "start": "react-app-rewired start",
-    "build": "react-app-rewired build"
+    "start": "react-scripts start",
+    "build": "react-scripts build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -30,8 +31,6 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {
-    "react-app-rewired": "^2.1.6"
-  },
+  "devDependencies": {},
   "homepage": "./"
 }
