@@ -6,11 +6,9 @@ import Uptime from './components/uptime';
 const App = () => {
 
   const API_KEYS = [
-    'm791244724-b42a93574ec7c6a5ea809b73',
-    'm791267304-951c351f521da117c47eab8d',
-    'm791267317-9ee1c697360fb8849c0e3bb5',
-    'm791267349-71f3642ebc5d2c24339b3771',
-    'm791267367-293b03b00905556a16df97f4'
+    'm791282847-eb135224ad13bbd14906f37b',
+    'm791282851-8d3a1eb5907b6a78ba66ef4f',
+    'm791282845-176a23ec25ade8e8fdb07f0a'
   ];
   const SITE_NAME = 'Uptime Status';
 
